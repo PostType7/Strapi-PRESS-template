@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "postmetas",
+  "info": {
+    "singularName": "postmeta",
+    "pluralName": "postmetas",
+    "displayName": "postmeta"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "value": {
+      "type": "string"
+    },
+    "post": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::post.post",
+      "inversedBy": "postmetas"
+    }
+  }
+}
